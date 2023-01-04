@@ -1,0 +1,22 @@
+/* Fonts */
+/* Logo & Titres: Shrikhand */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+/* font-family: 'Shrikhand', cursive;*
+/* Texte: Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+/* Colors */
+:root {
+    /* Color Brief */
+    --first-color: var(#9356DC);
+    --second-color: var(#FF79DA);
+    --third-color: var(#88E2D0);
+    /* Color Figma */
+    --fourth-color: var(#99E2D0);
+    --fifth-color: var(#008766);
+    --sixth-color: var(#89C8FA);
+    --seventh-color: var(#003A68);
+    --eighth-color: var(#9356DC);
+}
+
