@@ -5,17 +5,55 @@
 /* Texte: Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 /* font-family: 'Roboto', sans-serif; */
-
+/* Icons */
+/*
+    <i class="fa-sharp fa-solid fa-arrow-left"></i>
+    <i class="fa-thin fa-heart"></i>
+    <i class="fa-thin fa-plus"></i>
+    <i class="fa-regular fa-check"></i>
+    <i class="fa-solid fa-location-dot"></i>
+    <i class="fa-solid fa-mobile-screen-button"></i>
+    <i class="fa-light fa-list-ul"></i>
+    <i class="fa-sharp fa-solid fa-store"></i>
+    <i class="fa-solid fa-utensils"></i>
+    <i class="fa-solid fa-handshake-angle"></i>
+*/
 /* Colors */
 :root {
     /* Color Brief */
-    --first-color: var(#9356DC);
-    --second-color: var(#FF79DA);
-    --third-color: var(#88E2D0);
+    --first-color: #9356DC /* var(--first-color) */;
+    --second-color: #FF79DA /* var(--second-color) */;
+    --third-color: #88E2D0 /* var(--third-color) */;
     /* Color Figma */
-    --fourth-color: var(#99E2D0);
-    --fifth-color: var(#008766);
-    --sixth-color: var(#89C8FA);
-    --seventh-color: var(#003A68);
-    --eighth-color: var(#9356DC);
+    --fourth-color: #99E2D0 /* var(--fourth-color) */;
+    --fifth-color: #008766 /* var(--fifth-color) */;
+    --sixth-color: #89C8FA /* var(--sixth-color) */;
+    --seventh-color: #003A68 /* var(--seventh-color) */;
+    --eighth-color: #9356DC /* var(--eighth-color) */;
+    --location-color: #EAEAEA /* var(--location-color) */;
+    --menu-color: #F7F7F7 /* var(--menu-color) */;
+    --menu-hover-color: #F5EDFF /* var(--menu-hover-color) */;
+    --footer-color: #353535 /* var(--footer-color) */;
+}
+
+h2, p {
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top-section, .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description > h2, p {
+    text-align: center;
+}
+.description > h2 {
+    font-size: 1.2em;
 }
