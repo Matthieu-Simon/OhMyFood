@@ -1,0 +1,18 @@
+/*
+D’une manière générale, pour éviter les erreurs, faites en sorte d’importer vos fichiers dans l’ordre suivant :
+1) Utils : - Variables.
+           - Fonctions.
+           - Mixins.
+           - Placeholders.
+2) Feuilles de style de tiers (vendors) (si vous en avez).
+3) Base.
+4) Composants.
+5) Layout.
+6) Pages.
+7) Thèmes.
+*/
+@import "./utils/variables";
+
+body {
+        background: $color-primary;
+}

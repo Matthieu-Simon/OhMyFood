@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet n°4 Oh My Food - Parcours Intégrateur Web OpenClassroom",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matthieu-Simon/Projet-N-4-OhMyFood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matthieu-Simon/Projet-N-4-OhMyFood/issues"
+  },
+  "homepage": "https://github.com/Matthieu-Simon/Projet-N-4-OhMyFood#readme",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}
