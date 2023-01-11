@@ -12,8 +12,208 @@ D’une manière générale, pour éviter les erreurs, faites en sorte d’impor
 6) Pages.
 7) Thèmes.
 */
-body {
+/* Font Titre */
+/* font-family: 'Shrikhand', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Font Texte */
+/* font-family: 'Roboto', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+/* General */
+.top-section, .bottom-section {
+  background: #F7F7F7;
+}
+
+.input, .title-description, .content-description {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+.logo {
+  position: relative;
+  left: 80px;
+  padding: 10px 0;
+  width: 50%;
+  height: 30px;
+}
+
+/* Main */
+.middle-section-title, .bottom-section-title {
+  position: relative;
+  left: 15px;
+}
+
+/* Top Section */
+/* Form */
+.form {
+  width: 100%;
+  padding: 12px 0;
+}
+
+.form, .input {
+  background: #EAEAEA;
+}
+
+.input {
+  position: relative;
+  border: none;
+  width: 98%;
+}
+
+.input::placeholder {
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.location {
+  position: absolute;
+  top: 67px;
+  left: 85px;
+  z-index: 1;
+}
+
+/* Title & Content */
+.description {
+  font-family: "Roboto", sans-serif;
+  padding: 20px 0 45px;
+}
+
+.title-description {
+  font-size: 1.5em;
+}
+
+/* Button */
+.btn-description {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  position: relative;
+  left: 50px;
+}
+
+/* Middle Section */
+.middle-section {
+  font-family: "Roboto", sans-serif;
+  margin: 40px 0 60px;
+}
+
+.middle-section-option {
+  width: 90%;
+  height: 60px;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  position: relative;
+  left: 25px;
+  margin-bottom: 24px;
+}
+
+.middle-section-option:hover {
+  background: #F5EDFF;
+}
+
+.middle-icon:hover {
+  color: #9356DC;
+}
+
+.option-number {
+  position: relative;
+  top: 20px;
+  right: 10px;
   background: #9356DC;
+  color: #FFFFFF;
+  padding: 4px 9px;
+  border-radius: 15px;
+}
+
+.middle-icon {
+  color: grey;
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+
+.option-content {
+  position: relative;
+  bottom: 15px;
+  left: 80px;
+}
+
+/* Bottom Section */
+.bottom-section {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 0 30px;
+}
+
+.card-restaurant {
+  background: #FFFFFF;
+  width: 290px;
+  height: 210px;
+  margin: 20px 0 30px 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.img-restaurant {
+  width: 100%;
+  height: 150px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-title, .card-content {
+  margin: 0 0 0 10px;
+  color: black;
+}
+
+.card-title {
+  font-size: 1em;
+  padding-top: 5px;
+}
+
+/* Footer */
+.footer {
+  background: #353535;
+  color: #FFFFFF;
+  padding: 10px 0;
+}
+
+.footer-title {
+  font-family: "Shrikhand", cursive;
+  width: 50%;
+  font-size: 18px;
+}
+
+.footer-list {
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  line-height: 24px;
+  padding: 0;
+}
+
+.footer-title, .footer-list {
+  position: relative;
+  left: 30px;
+}
+
+.footer-img1 {
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+.footer-img {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.footer-link {
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=styles.css.map */
