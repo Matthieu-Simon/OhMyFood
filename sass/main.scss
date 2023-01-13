@@ -14,68 +14,68 @@ D’une manière générale, pour éviter les erreurs, faites en sorte d’impor
 @import "./utils/variables";
 @import "./base/fonts";
 /* General */
-.top-section, .bottom-section {
-       background: $color-grey;
-}
-.input, .title-description, .content-description {
-        text-align: center;
-}
 a {
         text-decoration: none;
 }
 /* Header */
-.logo {
-       display: block;
-       margin: auto;
-       padding: 10px 0;
-       width: 50%;
-       height: 30px;
+.header {
+        &__logo {
+                display: block;
+                margin: auto;
+                padding: 10px 0;
+                width: 50%;
+                height: 30px;
+        }
 }
 /* Main */
-.middle-section-title, .bottom-section-title {
-        position: relative;
-        left: 15px;
+.top-section, .bottom-section {
+        background: $color-grey;
+ }
+.middle-section, .bottom-section {
+        font-family: "Roboto", sans-serif;
+        &__title {
+                position: relative;
+                left: 15px;
+        }
 }
 /* Top Section */
 /* Form */
 .form {
+        font-family: "Roboto", sans-serif;
         width: 100%;
         padding: 12px 0;
-        box-shadow: inset 0px 1px 4px 1px rgba(0, 0, 0, 0.15);
-        
-}
-.form, .input {
         background: $color-location;
-}
-.input {
-        position: relative;
-        border: none;
-        width: 98%;
-}
-.input::placeholder {
-        color: black;
-        font-family: "Roboto", sans-serif;
-}
-.input:focus {
-        outline: none;
-}
-.location {
-        position: absolute;
-        top: 62px;
-        left: 85px;
-        z-index: 1;
+        box-shadow: inset 0px 1px 4px 1px rgba(0, 0, 0, 0.15);
+        &__input {
+                background: $color-location;
+                position: relative;
+                border: none;
+                width: 98%;
+                text-align: center;
+        }
+        &__input::placeholder {
+                color: black;
+        }
+        &__input:focus {
+                outline: none;
+        }
+        &__location {
+                position: absolute;
+                top: 62px;
+                left: 85px;
+                z-index: 1;
+        }
 }
 /* Title & Content */
 .description {
         font-family: "Roboto", sans-serif;
         padding: 20px 0 45px;
-}
-.title-description {
-        font-size: 1.5em;
-}
-/* Button */
-.btn-description {
-        display: block;
+        text-align: center;
+        &__title {
+                font-size: 1.5em;
+        }
+        &__btn {
+                display: block;
         margin: 15px auto 0;
         background: linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -83,90 +83,84 @@ a {
         color: $color-white;
         border: none;
         padding: 10px 20px;
+        }
 }
 /* Middle Section */
 .middle-section {
-        font-family: "Roboto", sans-serif;
         margin: 40px 0 60px;
-}
-.middle-section-option {
-        width: 90%;
-        height: 60px;
-        background: $color-grey;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-        border-radius: 20px;
-        position: relative;
-        left: 25px;
-        margin-bottom: 24px;
-}
-.middle-section-option:hover {
-        background: $color-grey-hover;
-}
-.middle-icon:hover {
-        color: $color-primary;
-}
-.option-number {
-        position: relative;
-        top: 20px;
-        right: 10px;
-        background: $color-primary;
-        color: $color-white;
-        padding: 4px 9px;
-        border-radius: 15px;
-}
-.middle-icon {
-        color: grey;
-        position: relative;
-        top: 20px;
-        left: 10px;
-}
-.option-content {
-        position: relative;
-        bottom: 15px;
-        left: 80px;
+        &__option {
+                width: 90%;
+                height: 60px;
+                background: $color-grey;
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+                border-radius: 20px;
+                margin: 0 auto 24px;
+        }
+        &__option:hover {
+                background: $color-grey-hover;
+        }
+        &__option--number {
+                position: relative;
+                top: 20px;
+                right: 10px;
+                background: $color-primary;
+                color: $color-white;
+                padding: 4px 9px;
+                border-radius: 15px;
+        }
+        &__option--icon {
+                color: grey;
+                position: relative;
+                top: 20px;
+                left: 10px;
+        }
+        &__option--icon:hover {
+                color: $color-primary;
+        }
+        &__option-content {
+                position: relative;
+                left: 80px;
+                bottom: 15px;
+        }
 }
 /* Bottom Section */
 .bottom-section {
-        font-family: "Roboto", sans-serif;
         padding: 10px 0 30px;
 }
-.card-restaurant {
+.article__card {
         background: $color-white;
+        color: black;
         width: 290px;
         height: 210px;
         margin: 20px 0 30px 15px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
-}
-.img-restaurant {
-        width: 100%;
-        height: 150px;
-        border-radius: 15px 15px 0 0;
-}
-.card-title1, .card-title2, .card-content1, .card-content2 {
-        color: black;
-        margin: 0;
-        position: relative;
-        left: 10px;
-        bottom: 20px;
-}
+        &__img {
+                width: 100%;
+                height: 150px;
+                border-radius: 15px 15px 0 0;
+        }
+        &__content {
+                font-size: 1em;
+                padding-top: 5px;
+                &--title1, &--title2, &--description1, &--description2 {
+                        position: relative;
+                        left: 10px;
+                        bottom: 20px;
+                }    
+                &--bottom-icon1, &--bottom-icon2 {
+                        color: rgb(144, 142, 142);
+                        position: relative;
+                        bottom: 50px;
+                        left: 240px;
+                        font-size: 24px;
+                }   
+        }
+        
+        
+}   
 .card-title1, .card-title2 {
         padding-bottom: 2px;
-}
-.card-title, .card-content {
-        margin: 0 0 0 10px;
-        color: black;
-}
-.card-title1, .card-title2, .card-title {
-        font-size: 1em;
-        padding-top: 5px;
-}
-.bottom-icon1, .bottom-icon2 {
-        color: rgb(144, 142, 142);
-        position: relative;
-        bottom: 50px;
-        left: 240px;
-        font-size: 24px;
 }
 .bottom-icon {
         color: rgb(144, 142, 142);
@@ -191,30 +185,31 @@ a {
         background: $color-footer;
         color: $color-white;
         padding: 10px 0;
+        &__title, &__list {
+                position: relative;
+                left: 20px;
+        }
+        &__title {
+                font-family: "Shrikhand", cursive;
+                width: 50%;
+                font-size: 18px;
+        }
+        &__list {
+                font-family: "Roboto", sans-serif;
+                list-style: none;
+                line-height: 24px;
+                padding: 0;
+        }
+        &__list--img1 {
+                font-size: 12px;
+                margin-right: 15px;
+        }
+        &__list--img {
+                font-size: 12px;
+                margin-right: 10px;
+        }
+        &__list--link {
+                color: $color-white;
+        }
 }
-.footer-title {
-        font-family: "Shrikhand", cursive;
-        width: 50%;
-        font-size: 18px;
-}
-.footer-list {
-        font-family: "Roboto", sans-serif;
-        list-style: none;
-        line-height: 24px;
-        padding: 0;
-}
-.footer-title, .footer-list {
-        position: relative;
-        left: 20px;
-}
-.footer-img1 {
-        font-size: 12px;
-        margin-right: 15px;
-}
-.footer-img {
-        font-size: 12px;
-        margin-right: 10px;
-}
-.footer-link {
-        color: $color-white;
-}
+
