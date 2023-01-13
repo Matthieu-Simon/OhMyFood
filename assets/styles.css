@@ -19,20 +19,12 @@ D’une manière générale, pour éviter les erreurs, faites en sorte d’impor
 /* font-family: 'Roboto', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 /* General */
-.top-section, .bottom-section {
-  background: #F7F7F7;
-}
-
-.input, .title-description, .content-description {
-  text-align: center;
-}
-
 a {
   text-decoration: none;
 }
 
 /* Header */
-.logo {
+.header__logo {
   display: block;
   margin: auto;
   padding: 10px 0;
@@ -41,7 +33,14 @@ a {
 }
 
 /* Main */
-.middle-section-title, .bottom-section-title {
+.top-section, .bottom-section {
+  background: #F7F7F7;
+}
+
+.middle-section, .bottom-section {
+  font-family: "Roboto", sans-serif;
+}
+.middle-section__title, .bottom-section__title {
   position: relative;
   left: 15px;
 }
@@ -49,31 +48,26 @@ a {
 /* Top Section */
 /* Form */
 .form {
+  font-family: "Roboto", sans-serif;
   width: 100%;
   padding: 12px 0;
+  background: #EAEAEA;
   box-shadow: inset 0px 1px 4px 1px rgba(0, 0, 0, 0.15);
 }
-
-.form, .input {
+.form__input {
   background: #EAEAEA;
-}
-
-.input {
   position: relative;
   border: none;
   width: 98%;
+  text-align: center;
 }
-
-.input::placeholder {
+.form__input::placeholder {
   color: black;
-  font-family: "Roboto", sans-serif;
 }
-
-.input:focus {
+.form__input:focus {
   outline: none;
 }
-
-.location {
+.form__location {
   position: absolute;
   top: 62px;
   left: 85px;
@@ -84,14 +78,12 @@ a {
 .description {
   font-family: "Roboto", sans-serif;
   padding: 20px 0 45px;
+  text-align: center;
 }
-
-.title-description {
+.description__title {
   font-size: 1.5em;
 }
-
-/* Button */
-.btn-description {
+.description__btn {
   display: block;
   margin: 15px auto 0;
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -104,30 +96,20 @@ a {
 
 /* Middle Section */
 .middle-section {
-  font-family: "Roboto", sans-serif;
   margin: 40px 0 60px;
 }
-
-.middle-section-option {
+.middle-section__option {
   width: 90%;
   height: 60px;
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  position: relative;
-  left: 25px;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
 }
-
-.middle-section-option:hover {
+.middle-section__option:hover {
   background: #F5EDFF;
 }
-
-.middle-icon:hover {
-  color: #9356DC;
-}
-
-.option-number {
+.middle-section__option--number {
   position: relative;
   top: 20px;
   right: 10px;
@@ -136,69 +118,59 @@ a {
   padding: 4px 9px;
   border-radius: 15px;
 }
-
-.middle-icon {
+.middle-section__option--icon {
   color: grey;
   position: relative;
   top: 20px;
   left: 10px;
 }
-
-.option-content {
+.middle-section__option--icon:hover {
+  color: #9356DC;
+}
+.middle-section__option-content {
   position: relative;
-  bottom: 15px;
   left: 80px;
+  bottom: 15px;
 }
 
 /* Bottom Section */
 .bottom-section {
-  font-family: "Roboto", sans-serif;
   padding: 10px 0 30px;
 }
 
-.card-restaurant {
+.article__card {
   background: #FFFFFF;
+  color: black;
   width: 290px;
   height: 210px;
   margin: 20px 0 30px 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
-
-.img-restaurant {
+.article__card__img {
   width: 100%;
   height: 150px;
   border-radius: 15px 15px 0 0;
 }
-
-.card-title1, .card-title2, .card-content1, .card-content2 {
-  color: black;
-  margin: 0;
+.article__card__content {
+  font-size: 1em;
+  padding-top: 5px;
+}
+.article__card__content--title1, .article__card__content--title2, .article__card__content--description1, .article__card__content--description2 {
   position: relative;
   left: 10px;
   bottom: 20px;
 }
-
-.card-title1, .card-title2 {
-  padding-bottom: 2px;
-}
-
-.card-title, .card-content {
-  margin: 0 0 0 10px;
-  color: black;
-}
-
-.card-title1, .card-title2, .card-title {
-  font-size: 1em;
-  padding-top: 5px;
-}
-
-.bottom-icon1, .bottom-icon2 {
+.article__card__content--bottom-icon1, .article__card__content--bottom-icon2 {
   color: rgb(144, 142, 142);
   position: relative;
   bottom: 50px;
   left: 240px;
   font-size: 24px;
+}
+
+.card-title1, .card-title2 {
+  padding-bottom: 2px;
 }
 
 .bottom-icon {
@@ -227,36 +199,30 @@ a {
   color: #FFFFFF;
   padding: 10px 0;
 }
-
-.footer-title {
+.footer__title, .footer__list {
+  position: relative;
+  left: 20px;
+}
+.footer__title {
   font-family: "Shrikhand", cursive;
   width: 50%;
   font-size: 18px;
 }
-
-.footer-list {
+.footer__list {
   font-family: "Roboto", sans-serif;
   list-style: none;
   line-height: 24px;
   padding: 0;
 }
-
-.footer-title, .footer-list {
-  position: relative;
-  left: 20px;
-}
-
-.footer-img1 {
+.footer__list--img1 {
   font-size: 12px;
   margin-right: 15px;
 }
-
-.footer-img {
+.footer__list--img {
   font-size: 12px;
   margin-right: 10px;
 }
-
-.footer-link {
+.footer__list--link {
   color: #FFFFFF;
 }
 
