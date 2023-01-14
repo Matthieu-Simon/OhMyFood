@@ -23,8 +23,6 @@ a {
                 display: block;
                 margin: auto;
                 padding: 10px 0;
-                width: 50%;
-                height: 30px;
         }
 }
 /* Main */
@@ -61,7 +59,7 @@ a {
         }
         &__location {
                 position: absolute;
-                top: 62px;
+                top: 66px;
                 left: 85px;
                 z-index: 1;
         }
@@ -89,7 +87,7 @@ a {
 .middle-section {
         margin: 40px 0 60px;
         &__option {
-                width: 90%;
+                width: 85%;
                 height: 60px;
                 background: $color-grey;
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -102,7 +100,7 @@ a {
         &__option--number {
                 position: relative;
                 top: 20px;
-                right: 10px;
+                right: 15px;
                 background: $color-primary;
                 color: $color-white;
                 padding: 4px 9px;
@@ -112,27 +110,37 @@ a {
                 color: grey;
                 position: relative;
                 top: 20px;
-                left: 10px;
+                left: 2px;
         }
         &__option--icon:hover {
                 color: $color-primary;
         }
         &__option-content {
                 position: relative;
-                left: 80px;
-                bottom: 15px;
+                left: 70px;
+                bottom: 12px;
+                font-size: 0.9em;
+                font-weight: 500;
         }
 }
 /* Bottom Section */
 .bottom-section {
-        padding: 10px 0 30px;
+        padding: 30px 0;
+        &__title {
+                margin-bottom: 0;
+        }
+        &__article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        }
 }
 .article__card {
         background: $color-white;
         color: black;
         width: 290px;
         height: 210px;
-        margin: 20px 0 30px 15px;
+        margin: 10px 0;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
         &__img {
@@ -141,45 +149,49 @@ a {
                 border-radius: 15px 15px 0 0;
         }
         &__content {
-                font-size: 1em;
                 padding-top: 5px;
+                &--badge {
+                        position: relative;
+                        left: 205px;
+                        bottom: 135px;
+                        padding: 5px 10px;
+                        border-radius: 2px;
+                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                        background: $color-tertiary;
+                        color: $color-badge;
+                        font-size: 14px;
+                }
                 &--title1, &--title2, &--description1, &--description2 {
                         position: relative;
                         left: 10px;
                         bottom: 20px;
-                }    
+                        margin: 0;
+                }
+                &--title, &--description {
+                        position: relative;
+                        left: 10px;
+                        margin: 0;
+                }
+                &--title1, &--title2, &--title {
+                        font-size: 1.1em;
+                        padding-bottom: 5px;
+                }
                 &--bottom-icon1, &--bottom-icon2 {
                         color: rgb(144, 142, 142);
                         position: relative;
-                        bottom: 50px;
+                        bottom: 60px;
                         left: 240px;
                         font-size: 24px;
-                }   
-        }
-        
-        
+                }
+                &--bottom-icon {
+                        color: rgb(144, 142, 142);
+                        position: relative;
+                        bottom: 40px;
+                        left: 240px;
+                        font-size: 24px;
+                }
+        }        
 }   
-.card-title1, .card-title2 {
-        padding-bottom: 2px;
-}
-.bottom-icon {
-        color: rgb(144, 142, 142);
-        position: relative;
-        bottom: 30px;
-        left: 240px;
-        font-size: 24px;
-}
-.card-badge {
-        position: relative;
-        left: 205px;
-        bottom: 135px;
-        padding: 5px 10px;
-        border-radius: 2px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-        background: $color-tertiary;
-        color: $color-badge;
-        font-size: 14px;
-}
 /* Footer */
 .footer {
         background: $color-footer;
