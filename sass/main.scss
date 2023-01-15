@@ -23,6 +23,7 @@ a {
                 display: block;
                 margin: auto;
                 padding: 10px 0;
+                cursor: pointer;
         }
 }
 /* Main */
@@ -46,10 +47,10 @@ a {
         box-shadow: inset 0px 1px 4px 1px rgba(0, 0, 0, 0.15);
         &__input {
                 background: $color-location;
-                position: relative;
                 border: none;
                 width: 98%;
                 text-align: center;
+                cursor: pointer;
         }
         &__input::placeholder {
                 color: black;
@@ -74,13 +75,17 @@ a {
         }
         &__btn {
                 display: block;
-        margin: 15px auto 0;
-        background: linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 25px;
-        color: $color-white;
-        border: none;
-        padding: 10px 20px;
+                margin: 15px auto 0;
+                background: linear-gradient(200.64deg, $color-primary -5.2%, $color-secondary 110.74%);
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+                border-radius: 25px;
+                color: $color-white;
+                border: none;
+                padding: 17px 22px;
+                cursor: pointer;
+        }
+        &__btn:focus {
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
         }
 }
 /* Middle Section */
@@ -93,34 +98,37 @@ a {
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
                 border-radius: 20px;
                 margin: 0 auto 24px;
+                transition: background-color 2s ease-out;
+                cursor: pointer;
+                &--number {
+                        position: relative;
+                        top: 20px;
+                        right: 15px;
+                        background: $color-primary;
+                        color: $color-white;
+                        padding: 4px 9px;
+                        border-radius: 15px;
+                }
+                &--icon {
+                        color: grey;
+                        position: relative;
+                        top: 20px;
+                        left: 2px;
+                }
+                &--choice {
+                        position: relative;
+                        left: 70px;
+                        bottom: 12px;
+                        font-size: 0.9em;
+                        font-weight: 500;
+                }
         }
         &__content__option:hover {
                 background: $color-grey-hover;
         }
-        &__content__option--number {
-                position: relative;
-                top: 20px;
-                right: 15px;
-                background: $color-primary;
-                color: $color-white;
-                padding: 4px 9px;
-                border-radius: 15px;
-        }
-        &__content__option--icon {
-                color: grey;
-                position: relative;
-                top: 20px;
-                left: 2px;
-        }
+        
         &__content__option--icon:hover {
                 color: $color-primary;
-        }
-        &__content__option-content {
-                position: relative;
-                left: 70px;
-                bottom: 12px;
-                font-size: 0.9em;
-                font-weight: 500;
         }
 }
 /* Bottom Section */
@@ -147,6 +155,7 @@ a {
                 width: 100%;
                 height: 150px;
                 border-radius: 15px 15px 0 0;
+                object-fit: cover;
         }
         &__content {
                 padding-top: 5px;
@@ -190,6 +199,10 @@ a {
                         left: 240px;
                         font-size: 24px;
                 }
+                &--bottom-icon:hover {
+                        color: red;
+                        
+                }
         }        
 }   
 /* Footer */
@@ -200,6 +213,7 @@ a {
         &__title, &__list {
                 position: relative;
                 left: 20px;
+                cursor: pointer;
         }
         &__title {
                 font-family: "Shrikhand", cursive;
@@ -228,6 +242,17 @@ a {
 /**** Media Queries ****/
 /* Desktop */
 @media (min-width: 1024px) {
+        .header {
+                &__logo {
+                        padding: 25px 0;
+                }
+        }
+        .form {
+                &__location {
+                        top: 95px;
+                        left: 800px;
+                }
+        }
         .middle-section {
                 display: flex;
                 flex-direction: column;
@@ -246,7 +271,7 @@ a {
                         &--choice {
                                 position: relative;
                                 left: 75px;
-                                bottom: 15px;
+                                bottom: 12px;
                         }
                 }
         }
@@ -262,7 +287,10 @@ a {
                         margin: 1em;
                 }
                 &__article {
-                        width: 87%;
+                        &--link {
+                                width: 15%;
+                        }
+                        width: 90%;
                         flex-direction: row;
                         justify-content: space-evenly;
                         padding-bottom: 25px;
