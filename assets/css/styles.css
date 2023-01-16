@@ -1,29 +1,25 @@
-@charset "UTF-8";
-/*
-D’une manière générale, pour éviter les erreurs, faites en sorte d’importer vos fichiers dans l’ordre suivant :
-1) Utils : - Variables.
-           - Fonctions.
-           - Mixins.
-           - Placeholders.
-2) Feuilles de style de tiers (vendors) (si vous en avez).
-3) Base.
-4) Composants.
-5) Layout.
-6) Pages.
-7) Thèmes.
-*/
 /* Font Titre */
 /* font-family: 'Shrikhand', cursive; */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Font Texte */
 /* font-family: 'Roboto', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-/* General */
-a {
-  text-decoration: none;
+.description__btn {
+  display: block;
+  margin: 15px auto 0;
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  color: #FFFFFF;
+  border: none;
+  padding: 17px 22px;
+  transition: background-color 2s ease;
+  cursor: pointer;
+}
+.description__btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
-/* Header */
 .header__logo {
   display: block;
   margin: auto;
@@ -52,13 +48,14 @@ a {
   padding: 12px 0;
   background: #EAEAEA;
   box-shadow: inset 0px 1px 4px 1px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
 }
 .form__input {
   background: #EAEAEA;
   border: none;
-  width: 98%;
-  text-align: center;
   cursor: pointer;
+  margin-left: 10px;
 }
 .form__input::placeholder {
   color: black;
@@ -67,10 +64,7 @@ a {
   outline: none;
 }
 .form__location {
-  position: absolute;
-  top: 66px;
-  left: 85px;
-  z-index: 1;
+  margin-left: 50px;
 }
 
 /* Title & Content */
@@ -81,20 +75,6 @@ a {
 }
 .description__title {
   font-size: 1.5em;
-}
-.description__btn {
-  display: block;
-  margin: 15px auto 0;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-  border-radius: 25px;
-  color: #FFFFFF;
-  border: none;
-  padding: 17px 22px;
-  cursor: pointer;
-}
-.description__btn:focus {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 /* Middle Section */
@@ -108,7 +88,7 @@ a {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   margin: 0 auto 24px;
-  transition: background-color 2s ease-out;
+  transition: background-color 1.5s ease-in;
   cursor: pointer;
 }
 .middle-section__content__option--number {
@@ -136,7 +116,7 @@ a {
 .middle-section__content__option:hover {
   background: #F5EDFF;
 }
-.middle-section__content__option--icon:hover {
+.middle-section__content__option:hover__content__option--icon:hover {
   color: #9356DC;
 }
 
@@ -211,11 +191,7 @@ a {
   left: 240px;
   font-size: 24px;
 }
-.article__card__content--bottom-icon:hover {
-  color: red;
-}
 
-/* Footer */
 .footer {
   background: #353535;
   color: #FFFFFF;
@@ -245,7 +221,10 @@ a {
   font-size: 12px;
   margin-right: 10px;
 }
-.footer__list--link {
+
+/* General */
+a {
+  text-decoration: none;
   color: #FFFFFF;
 }
 
@@ -265,21 +244,21 @@ a {
     align-items: center;
   }
   .middle-section__title {
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: flex-start;
   }
   .middle-section__content {
-    width: 85%;
+    width: 83%;
     display: flex;
     flex-direction: row;
   }
   .middle-section__content__option {
-    width: 23%;
+    width: 30%;
   }
   .middle-section__content__option--choice {
     position: relative;
-    left: 75px;
+    left: 70px;
     bottom: 12px;
   }
   .bottom-section {
@@ -288,13 +267,13 @@ a {
     align-items: center;
   }
   .bottom-section__title {
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: flex-start;
     margin: 1em;
   }
   .bottom-section__article {
-    width: 90%;
+    width: 100%;
     flex-direction: row;
     justify-content: space-evenly;
     padding-bottom: 25px;
