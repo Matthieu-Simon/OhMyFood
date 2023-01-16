@@ -1,0 +1,159 @@
+/* Main */
+.top-section, .bottom-section {
+    background: $color-grey;
+}
+.middle-section, .bottom-section {
+    font-family: "Roboto", sans-serif;
+    &__title {
+            position: relative;
+            left: 15px;
+    }
+}
+/* Top Section */
+/* Form */
+.form {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    padding: 12px 0;
+    background: $color-location;
+    box-shadow: inset 0px 1px 4px 1px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    &__input {
+            background: $color-location;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+    }
+    &__input::placeholder {
+            color: black;
+    }
+    &__input:focus {
+            outline: none;
+    }
+    &__location {
+            margin-left: 50px;
+    }
+}
+/* Title & Content */
+.description {
+    font-family: "Roboto", sans-serif;
+    padding: 20px 0 45px;
+    text-align: center;
+    &__title {
+            font-size: 1.5em;
+    }
+    
+}
+/* Middle Section */
+.middle-section {
+    margin: 40px 0 60px;
+    &__content__option {
+            width: 85%;
+            height: 60px;
+            background: $color-grey;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            margin: 0 auto 24px;
+            transition: background-color 1.5s ease-in;
+            cursor: pointer;
+            &--number {
+                    position: relative;
+                    top: 20px;
+                    right: 15px;
+                    background: $color-primary;
+                    color: $color-white;
+                    padding: 4px 9px;
+                    border-radius: 15px;
+            }
+            &--icon {
+                    color: grey;
+                    position: relative;
+                    top: 20px;
+                    left: 2px;
+            }
+            &--choice {
+                    position: relative;
+                    left: 70px;
+                    bottom: 12px;
+                    font-size: 0.9em;
+                    font-weight: 500;
+            }
+    }
+    &__content__option:hover {
+            background: $color-grey-hover;
+            &__content__option--icon:hover {
+                    color: $color-primary;
+            }
+    }
+}
+/* Bottom Section */
+.bottom-section {
+    padding: 30px 0;
+    &__title {
+            margin-bottom: 0;
+    }
+    &__article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+}
+.article__card {
+    background: $color-white;
+    color: black;
+    width: 290px;
+    height: 210px;
+    margin: 10px 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    &__img {
+            width: 100%;
+            height: 150px;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+    }
+    &__content {
+            padding-top: 5px;
+            &--badge {
+                    position: relative;
+                    left: 205px;
+                    bottom: 135px;
+                    padding: 5px 10px;
+                    border-radius: 2px;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                    background: $color-tertiary;
+                    color: $color-badge;
+                    font-size: 14px;
+            }
+            &--title1, &--title2, &--description1, &--description2 {
+                    position: relative;
+                    left: 10px;
+                    bottom: 20px;
+                    margin: 0;
+            }
+            &--title, &--description {
+                    position: relative;
+                    left: 10px;
+                    margin: 0;
+            }
+            &--title1, &--title2, &--title {
+                    font-size: 1.1em;
+                    padding-bottom: 5px;
+            }
+            &--bottom-icon1, &--bottom-icon2 {
+                    color: rgb(144, 142, 142);
+                    position: relative;
+                    bottom: 60px;
+                    left: 240px;
+                    font-size: 24px;
+            }
+            &--bottom-icon {
+                    color: rgb(144, 142, 142);
+                    position: relative;
+                    bottom: 40px;
+                    left: 240px;
+                    font-size: 24px;
+            }
+    }        
+}   
