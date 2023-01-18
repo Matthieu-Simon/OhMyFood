@@ -21,6 +21,20 @@
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
+.btn-menu {
+  width: 186px;
+  display: block;
+  margin: 15px auto 40px;
+  background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  color: #FFFFFF;
+  border: none;
+  padding: 17px 22px;
+  transition: background-color 2s ease;
+  cursor: pointer;
+}
+
 .btn-return {
   color: black;
   position: absolute;
@@ -28,6 +42,12 @@
   left: 20px;
 }
 
+@media (min-width: 992px) {
+  .btn-return {
+    top: 35px;
+    left: 8%;
+  }
+}
 .header .logo {
   display: block;
   margin: auto;
@@ -257,20 +277,34 @@
   object-fit: cover;
   border: 25px;
 }
-.main .banner-section .title {
+.main .background-menu {
+  background: #F7F7F7;
+  position: relative;
+  top: -50px;
+  margin: 0 0 -50px 0;
+  border-radius: 30px 30px 0 0;
+}
+.main .background-menu .title-restaurant {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 30px;
+}
+.main .background-menu .title-restaurant .title {
   font-family: "Shrikhand", cursive;
   font-size: 1.5em;
 }
-.main .banner-section .section-bottom-icon {
-  position: relative;
-  left: 270px;
-  bottom: 40px;
+.main .background-menu .title-restaurant .icon {
   font-size: 1.5em;
 }
 .main .menu-section .title {
   font-weight: 300;
+  margin-left: 10px;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
+}
+.main .menu-section .category {
+  padding-bottom: 15px;
 }
 .main .menu-section .menu-description {
   width: 95%;
@@ -303,11 +337,36 @@
 }
 .main .menu-section .price-description {
   margin: 25px 15px 0 0;
+  font-weight: 700;
 }
 .main .menu-section .subtitle, .main .menu-section .content {
   margin: 0;
 }
 
+@media (min-width: 992px) {
+  .banner-section .img {
+    height: 400px !important;
+  }
+  .main {
+    background: #FFFFFF;
+  }
+  .background-menu {
+    width: 70%;
+    margin: auto !important;
+  }
+  .card-section {
+    width: 70%;
+    margin: auto;
+    background: #F7F7F7;
+  }
+  .title-restaurant {
+    display: flex;
+    justify-content: center !important;
+  }
+  .title-restaurant .icon {
+    margin-left: 40px;
+  }
+}
 .footer {
   background: #353535;
   color: #FFFFFF;
