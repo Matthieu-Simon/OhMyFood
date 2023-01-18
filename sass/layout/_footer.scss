@@ -2,28 +2,45 @@
     background: $color-footer;
     color: $color-white;
     padding: 10px 0;
-    &__title, &__list {
+    .title, .list {
             position: relative;
             left: 20px;
             cursor: pointer;
     }
-    &__title {
+    .title {
             font-family: "Shrikhand", cursive;
             width: 50%;
             font-size: 18px;
     }
-    &__list {
+    .list {
             font-family: "Roboto", sans-serif;
             list-style: none;
             line-height: 24px;
             padding: 0;
     }
-    &__list--img1 {
+    .img1 {
             font-size: 12px;
             margin-right: 15px;
     }
-    &__list--img {
+    .img {
             font-size: 12px;
             margin-right: 10px;
     }
+}
+@media (min-width: 992px) {
+        .footer {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                .title {
+                        width: 15%;
+                        display: flex;
+                        justify-content: flex-start;
+                }
+                .list {
+                        width: 55%;
+                        display: flex;
+                        justify-content: space-evenly;
+                }
+        }
 }

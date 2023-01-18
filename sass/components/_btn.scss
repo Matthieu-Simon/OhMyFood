@@ -1,5 +1,4 @@
-.description {
-    &__btn {
+.btn {
         display: block;
         margin: 15px auto 0;
         background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
@@ -11,8 +10,7 @@
         transition: background-color 2s ease;
         cursor: pointer;
     }
-    &__btn:hover {
+    .btn:hover {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     
-    }
 }

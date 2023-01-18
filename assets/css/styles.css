@@ -4,7 +4,7 @@
 /* Font Texte */
 /* font-family: 'Roboto', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-.description__btn {
+.btn {
   display: block;
   margin: 15px auto 0;
   background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
@@ -16,17 +16,23 @@
   transition: background-color 2s ease;
   cursor: pointer;
 }
-.description__btn:hover {
+
+.btn:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
-.header__logo {
+.header .logo {
   display: block;
   margin: auto;
   padding: 10px 0;
   cursor: pointer;
 }
 
+@media (min-width: 992px) {
+  .header .logo {
+    padding: 25px 0;
+  }
+}
 /* Main */
 .top-section, .bottom-section {
   background: #F7F7F7;
@@ -35,9 +41,9 @@
 .middle-section, .bottom-section {
   font-family: "Roboto", sans-serif;
 }
-.middle-section__title, .bottom-section__title {
+.middle-section .title, .bottom-section .title {
   position: relative;
-  left: 15px;
+  left: 20px;
 }
 
 /* Top Section */
@@ -51,19 +57,19 @@
   display: flex;
   justify-content: center;
 }
-.form__input {
+.form .input {
   background: #EAEAEA;
   border: none;
   cursor: pointer;
   margin-left: 10px;
 }
-.form__input::placeholder {
+.form .input::placeholder {
   color: black;
 }
-.form__input:focus {
+.form .input:focus {
   outline: none;
 }
-.form__location {
+.form .location {
   margin-left: 50px;
 }
 
@@ -73,16 +79,17 @@
   padding: 20px 0 45px;
   text-align: center;
 }
-.description__title {
+.description .title {
   font-size: 1.5em;
 }
 
 /* Middle Section */
 .middle-section {
-  margin: 40px 0 60px;
+  padding: 40px 0 60px;
+  background: #FFFFFF;
 }
-.middle-section__content__option {
-  width: 85%;
+.middle-section .option {
+  width: 80vw;
   height: 60px;
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -91,7 +98,7 @@
   transition: background-color 1.5s ease-in;
   cursor: pointer;
 }
-.middle-section__content__option--number {
+.middle-section .option .number {
   position: relative;
   top: 20px;
   right: 15px;
@@ -100,23 +107,23 @@
   padding: 4px 9px;
   border-radius: 15px;
 }
-.middle-section__content__option--icon {
+.middle-section .option .icon {
   color: grey;
   position: relative;
   top: 20px;
   left: 2px;
 }
-.middle-section__content__option--choice {
+.middle-section .option .choice {
   position: relative;
   left: 70px;
   bottom: 12px;
   font-size: 0.9em;
   font-weight: 500;
 }
-.middle-section__content__option:hover {
+.middle-section .option:hover {
   background: #F5EDFF;
 }
-.middle-section__content__option:hover__content__option--icon:hover {
+.middle-section .option:hover .icon:hover {
   color: #9356DC;
 }
 
@@ -124,36 +131,36 @@
 .bottom-section {
   padding: 30px 0;
 }
-.bottom-section__title {
+.bottom-section .title {
   margin-bottom: 0;
 }
-.bottom-section__article {
+.bottom-section .article {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.article__card {
+.card {
   background: #FFFFFF;
   color: black;
-  width: 290px;
+  width: 85vw;
   height: 210px;
   margin: 10px 0;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
-.article__card__img {
+.card .img {
   width: 100%;
   height: 150px;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.article__card__content {
+.card .content {
   padding-top: 5px;
 }
-.article__card__content--badge {
+.card .content .badge {
   position: relative;
-  left: 205px;
+  left: 180px;
   bottom: 135px;
   padding: 5px 10px;
   border-radius: 2px;
@@ -162,34 +169,109 @@
   color: #008766;
   font-size: 14px;
 }
-.article__card__content--title1, .article__card__content--title2, .article__card__content--description1, .article__card__content--description2 {
+.card .content .title1, .card .content .title2, .card .content .subtitle1, .card .content .subtitle2 {
   position: relative;
   left: 10px;
   bottom: 20px;
   margin: 0;
 }
-.article__card__content--title, .article__card__content--description {
+.card .content .title, .card .content .subtitle {
   position: relative;
   left: 10px;
   margin: 0;
 }
-.article__card__content--title1, .article__card__content--title2, .article__card__content--title {
+.card .content .title1, .card .content .title2, .card .content .title {
   font-size: 1.1em;
   padding-bottom: 5px;
 }
-.article__card__content--bottom-icon1, .article__card__content--bottom-icon2 {
+.card .content .icon1, .card .content .icon2 {
   color: rgb(144, 142, 142);
   position: relative;
   bottom: 60px;
-  left: 240px;
+  left: 230px;
   font-size: 24px;
 }
-.article__card__content--bottom-icon {
+.card .content .icon {
   color: rgb(144, 142, 142);
   position: relative;
+  left: 230px;
   bottom: 40px;
-  left: 240px;
   font-size: 24px;
+}
+
+@media (min-width: 992px) {
+  .form .location {
+    top: 95px;
+    left: 800px;
+  }
+  .middle-section {
+    margin: auto;
+  }
+  .middle-section .title {
+    left: 95px;
+  }
+  .middle-section .content {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .middle-section .content .option {
+    width: 30%;
+  }
+  .middle-section .content .option .choice {
+    position: relative;
+    left: 70px;
+    bottom: 12px;
+  }
+  .bottom-section {
+    width: 90%;
+    margin: auto;
+  }
+  .bottom-section .title {
+    left: 25px;
+  }
+  .bottom-section .article {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .bottom-section .article .card {
+    width: 20vw;
+  }
+}
+/* Header */
+.header__btn-return {
+  color: black;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Head Section */
+.main {
+  background: #F7F7F7;
+  font-family: "Roboto", sans-serif;
+  /* Main */
+}
+.main .head__section--img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.main .head__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
+}
+.main .head__section--bottom-icon {
+  position: relative;
+  left: 270px;
+  bottom: 40px;
+  font-size: 1.5em;
+}
+.main .menu__section__category-title {
+  font-weight: 300;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
 }
 
 .footer {
@@ -197,31 +279,48 @@
   color: #FFFFFF;
   padding: 10px 0;
 }
-.footer__title, .footer__list {
+.footer .title, .footer .list {
   position: relative;
   left: 20px;
   cursor: pointer;
 }
-.footer__title {
+.footer .title {
   font-family: "Shrikhand", cursive;
   width: 50%;
   font-size: 18px;
 }
-.footer__list {
+.footer .list {
   font-family: "Roboto", sans-serif;
   list-style: none;
   line-height: 24px;
   padding: 0;
 }
-.footer__list--img1 {
+.footer .img1 {
   font-size: 12px;
   margin-right: 15px;
 }
-.footer__list--img {
+.footer .img {
   font-size: 12px;
   margin-right: 10px;
 }
 
+@media (min-width: 992px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .footer .title {
+    width: 15%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .footer .list {
+    width: 55%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
 /* General */
 a {
   text-decoration: none;
@@ -230,72 +329,5 @@ a {
 
 /**** Media Queries ****/
 /* Desktop */
-@media (min-width: 1024px) {
-  .header__logo {
-    padding: 25px 0;
-  }
-  .form__location {
-    top: 95px;
-    left: 800px;
-  }
-  .middle-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .middle-section__title {
-    width: 85%;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .middle-section__content {
-    width: 83%;
-    display: flex;
-    flex-direction: row;
-  }
-  .middle-section__content__option {
-    width: 30%;
-  }
-  .middle-section__content__option--choice {
-    position: relative;
-    left: 70px;
-    bottom: 12px;
-  }
-  .bottom-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .bottom-section__title {
-    width: 85%;
-    display: flex;
-    justify-content: flex-start;
-    margin: 1em;
-  }
-  .bottom-section__article {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-bottom: 25px;
-  }
-  .bottom-section__article--link {
-    width: 15%;
-  }
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-  .footer__title {
-    width: 15%;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .footer__list {
-    width: 55%;
-    display: flex;
-    justify-content: space-evenly;
-  }
-}
 
 /*# sourceMappingURL=styles.css.map */

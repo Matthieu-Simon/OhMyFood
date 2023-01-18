@@ -4,9 +4,9 @@
 }
 .middle-section, .bottom-section {
     font-family: "Roboto", sans-serif;
-    &__title {
+    .title {
             position: relative;
-            left: 15px;
+            left: 20px;
     }
 }
 /* Top Section */
@@ -19,19 +19,19 @@
     box-shadow: inset 0px 1px 4px 1px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: center;
-    &__input {
+    .input {
             background: $color-location;
             border: none;
             cursor: pointer;
             margin-left: 10px;
     }
-    &__input::placeholder {
+    .input::placeholder {
             color: black;
     }
-    &__input:focus {
+    .input:focus {
             outline: none;
     }
-    &__location {
+    .location {
             margin-left: 50px;
     }
 }
@@ -40,16 +40,17 @@
     font-family: "Roboto", sans-serif;
     padding: 20px 0 45px;
     text-align: center;
-    &__title {
+    .title {
             font-size: 1.5em;
     }
     
 }
 /* Middle Section */
 .middle-section {
-    margin: 40px 0 60px;
-    &__content__option {
-            width: 85%;
+    padding: 40px 0 60px;
+    background: $color-white;
+    .option {
+            width: 80vw;
             height: 60px;
             background: $color-grey;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -57,7 +58,7 @@
             margin: 0 auto 24px;
             transition: background-color 1.5s ease-in;
             cursor: pointer;
-            &--number {
+            .number {
                     position: relative;
                     top: 20px;
                     right: 15px;
@@ -66,13 +67,13 @@
                     padding: 4px 9px;
                     border-radius: 15px;
             }
-            &--icon {
+            .icon {
                     color: grey;
                     position: relative;
                     top: 20px;
                     left: 2px;
             }
-            &--choice {
+            .choice {
                     position: relative;
                     left: 70px;
                     bottom: 12px;
@@ -80,9 +81,9 @@
                     font-weight: 500;
             }
     }
-    &__content__option:hover {
+    .option:hover {
             background: $color-grey-hover;
-            &__content__option--icon:hover {
+            .icon:hover {
                     color: $color-primary;
             }
     }
@@ -90,34 +91,34 @@
 /* Bottom Section */
 .bottom-section {
     padding: 30px 0;
-    &__title {
+    .title {
             margin-bottom: 0;
     }
-    &__article {
+    .article {
             display: flex;
             flex-direction: column;
             align-items: center;
     }
 }
-.article__card {
+.card {
     background: $color-white;
     color: black;
-    width: 290px;
+    width: 85vw;
     height: 210px;
     margin: 10px 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    &__img {
+    .img {
             width: 100%;
             height: 150px;
             border-radius: 15px 15px 0 0;
             object-fit: cover;
     }
-    &__content {
+    .content {
             padding-top: 5px;
-            &--badge {
+            .badge {
                     position: relative;
-                    left: 205px;
+                    left: 180px;
                     bottom: 135px;
                     padding: 5px 10px;
                     border-radius: 2px;
@@ -126,34 +127,80 @@
                     color: $color-badge;
                     font-size: 14px;
             }
-            &--title1, &--title2, &--description1, &--description2 {
+            .title1, .title2, .subtitle1, .subtitle2 {
                     position: relative;
                     left: 10px;
                     bottom: 20px;
                     margin: 0;
             }
-            &--title, &--description {
+            .title, .subtitle {
                     position: relative;
                     left: 10px;
                     margin: 0;
+                    
             }
-            &--title1, &--title2, &--title {
+            .title1, .title2, .title {
                     font-size: 1.1em;
                     padding-bottom: 5px;
             }
-            &--bottom-icon1, &--bottom-icon2 {
+            .icon1, .icon2 {
                     color: rgb(144, 142, 142);
                     position: relative;
                     bottom: 60px;
-                    left: 240px;
+                    left: 230px;
                     font-size: 24px;
             }
-            &--bottom-icon {
+            .icon {
                     color: rgb(144, 142, 142);
                     position: relative;
+                    left: 230px;
                     bottom: 40px;
-                    left: 240px;
                     font-size: 24px;
             }
     }        
 }   
+
+@media (min-width: 992px) {
+        .form {
+                .location {
+                        top: 95px;
+                        left: 800px;
+                }
+        }
+        .middle-section {
+                margin: auto;
+        .title {
+                left: 95px;
+        }
+        .content {
+                width: 85%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                .option {
+                        width: 30%;
+                        .choice {
+                                position: relative;
+                                left: 70px;
+                                bottom: 12px;
+                        }
+                }
+        }
+        }
+        .bottom-section {
+                width: 90%;
+                margin: auto;
+                .title {
+                        left: 25px;
+                }
+                .article {
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        .card {
+                                width: 20vw;
+                        }
+                }
+                
+        
+        }
+}
