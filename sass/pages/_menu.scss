@@ -81,28 +81,30 @@
     }
 }
 @media (min-width: 992px) {
-    .banner-section {
-        .img {
-            height: 400px !important;
-        }
-    }
     .main {
         background: $color-white;
-    }
-    .background-menu {
-        width: 70%;
-        margin: auto !important;
-    }
-    .card-section {
-        width: 70%;
-        margin: auto;
-        background: $color-grey;
-    }
-    .title-restaurant {
-        display: flex;
-        justify-content: center !important;
-        .icon {
-            margin-left: 40px;
+        .banner-section {
+            .img {
+                height: 350px;
+            }
+        }
+        .background-menu {
+            width: 70%;
+            margin: auto;
+            margin-bottom: -50px;
+            padding-bottom: 30px;
+            .card-section {
+                width: 70%;
+                margin: auto;
+                background: $color-grey;
+            }
+            .title-restaurant {
+                display: flex;
+                justify-content: center;
+                .icon {
+                    margin-left: 40px;
+                }
+            }
         }
     }
 }
