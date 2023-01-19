@@ -1,3 +1,49 @@
+/* Loader */
+.loader-container {
+        display: flex;
+        flex-direction: column;
+        animation: increase 3s forwards;
+        .loader-title {
+                z-index: 1;
+                font-family: "Shrikhand", cursive;
+                font-size: 5em;
+                margin: auto;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+        }
+}
+.loader {
+        position: absolute;
+        background: $color-white;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 1s ease-in-out;
+        .dot {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background: #000;
+                color: $color-white;
+                margin: 0 15px;
+                animation: loader infinite 0.3s alternate;
+        }
+        .d2 {
+                animation-delay: 0.05s;
+        }
+        .d3 {
+                animation-delay: 0.1s;
+        }
+        @keyframes loader {
+                100% {
+                        transform: translateY(-30px);
+                }
+        }
+}
 /* Main */
 .top-section, .bottom-section {
     background: $color-grey;
@@ -113,20 +159,27 @@
             height: 150px;
             border-radius: 15px 15px 0 0;
             object-fit: cover;
-    }
+        }
+    .badge1, .badge2 {
+        padding: 5px 10px;
+        border-radius: 2px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+        background: $color-tertiary;
+        color: $color-badge;
+        font-size: 14px;
+        }
+        .badge1 {
+                position: relative;
+                left: 65%;
+                bottom: 60%;
+        }
+        .badge2 {
+                position: relative;
+                left: 65%;
+                bottom: 60%;
+        }
     .content {
             padding-top: 5px;
-            .badge {
-                    position: relative;
-                    left: 180px;
-                    bottom: 135px;
-                    padding: 5px 10px;
-                    border-radius: 2px;
-                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-                    background: $color-tertiary;
-                    color: $color-badge;
-                    font-size: 14px;
-            }
             .title1, .title2, .subtitle1, .subtitle2 {
                     position: relative;
                     left: 10px;
@@ -147,17 +200,17 @@
                     color: rgb(144, 142, 142);
                     position: relative;
                     bottom: 60px;
-                    left: 230px;
+                    left: 85%;
                     font-size: 24px;
             }
             .icon {
                     color: rgb(144, 142, 142);
                     position: relative;
-                    left: 230px;
+                    left: 85%;
                     bottom: 40px;
                     font-size: 24px;
             }
-    }        
+        }        
 }   
 
 @media (min-width: 992px) {
@@ -169,38 +222,63 @@
         }
         .middle-section {
                 margin: auto;
-        .title {
-                left: 95px;
-        }
-        .content {
-                width: 85%;
-                margin: auto;
-                display: flex;
-                flex-direction: row;
-                .option {
-                        width: 30%;
-                        .choice {
-                                position: relative;
-                                left: 70px;
-                                bottom: 12px;
+                .title {
+                        left: 95px;
+                }
+                .content {
+                        width: 85%;
+                        margin: auto;
+                        display: flex;
+                        flex-direction: row;
+                        .option {
+                                width: 30%;
+                                .choice {
+                                        position: relative;
+                                        left: 70px;
+                                        bottom: 12px;
+                                }
                         }
                 }
         }
-        }
         .bottom-section {
-                width: 90%;
-                margin: auto;
                 .title {
-                        left: 25px;
+                        left: 90px;
                 }
                 .article {
+                        margin: auto;
+                        width: 90%;
                         flex-direction: row;
                         justify-content: space-evenly;
                         .card {
                                 width: 20vw;
                         }
                 }
-                
+                .badge1 {
+                        position: relative;
+                        left: 60%;
+                        bottom: 60%;
+                }
+                .badge2 {
+                        position: relative;
+                        left: 60%;
+                        bottom: 60%;
+                }
+                .content {
+                        .icon1, .icon2 {
+                                color: rgb(144, 142, 142);
+                                position: relative;
+                                bottom: 60px;
+                                left: 85%;
+                                font-size: 24px;
+                        }
+                        .icon {
+                                color: rgb(144, 142, 142);
+                                position: relative;
+                                left: 85%;
+                                bottom: 40px;
+                                font-size: 24px;
+                        }
+                }
         
         }
 }

@@ -63,6 +63,54 @@
     padding: 25px 0;
   }
 }
+/* Loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  animation: increase 3s forwards;
+}
+.loader-container .loader-title {
+  z-index: 1;
+  font-family: "Shrikhand", cursive;
+  font-size: 5em;
+  margin: auto;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  position: absolute;
+  background: #FFFFFF;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+}
+.loader .dot {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #000;
+  color: #FFFFFF;
+  margin: 0 15px;
+  animation: loader infinite 0.3s alternate;
+}
+.loader .d2 {
+  animation-delay: 0.05s;
+}
+.loader .d3 {
+  animation-delay: 0.1s;
+}
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
 /* Main */
 .top-section, .bottom-section {
   background: #F7F7F7;
@@ -185,19 +233,26 @@
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.card .content {
-  padding-top: 5px;
-}
-.card .content .badge {
-  position: relative;
-  left: 180px;
-  bottom: 135px;
+.card .badge1, .card .badge2 {
   padding: 5px 10px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   background: #99E2D0;
   color: #008766;
   font-size: 14px;
+}
+.card .badge1 {
+  position: relative;
+  left: 65%;
+  bottom: 60%;
+}
+.card .badge2 {
+  position: relative;
+  left: 65%;
+  bottom: 60%;
+}
+.card .content {
+  padding-top: 5px;
 }
 .card .content .title1, .card .content .title2, .card .content .subtitle1, .card .content .subtitle2 {
   position: relative;
@@ -218,13 +273,13 @@
   color: rgb(144, 142, 142);
   position: relative;
   bottom: 60px;
-  left: 230px;
+  left: 85%;
   font-size: 24px;
 }
 .card .content .icon {
   color: rgb(144, 142, 142);
   position: relative;
-  left: 230px;
+  left: 85%;
   bottom: 40px;
   font-size: 24px;
 }
@@ -254,19 +309,41 @@
     left: 70px;
     bottom: 12px;
   }
-  .bottom-section {
-    width: 90%;
-    margin: auto;
-  }
   .bottom-section .title {
-    left: 25px;
+    left: 90px;
   }
   .bottom-section .article {
+    margin: auto;
+    width: 90%;
     flex-direction: row;
     justify-content: space-evenly;
   }
   .bottom-section .article .card {
     width: 20vw;
+  }
+  .bottom-section .badge1 {
+    position: relative;
+    left: 60%;
+    bottom: 60%;
+  }
+  .bottom-section .badge2 {
+    position: relative;
+    left: 60%;
+    bottom: 60%;
+  }
+  .bottom-section .content .icon1, .bottom-section .content .icon2 {
+    color: rgb(144, 142, 142);
+    position: relative;
+    bottom: 60px;
+    left: 85%;
+    font-size: 24px;
+  }
+  .bottom-section .content .icon {
+    color: rgb(144, 142, 142);
+    position: relative;
+    left: 85%;
+    bottom: 40px;
+    font-size: 24px;
   }
 }
 /* Head Section */
