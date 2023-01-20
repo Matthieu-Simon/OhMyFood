@@ -80,37 +80,6 @@
   transform: translate(-50%, -50%);
 }
 
-.loader {
-  position: absolute;
-  background: #FFFFFF;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 1s ease-in-out;
-}
-.loader .dot {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #000;
-  color: #FFFFFF;
-  margin: 0 15px;
-  animation: loader infinite 0.3s alternate;
-}
-.loader .d2 {
-  animation-delay: 0.05s;
-}
-.loader .d3 {
-  animation-delay: 0.1s;
-}
-@keyframes loader {
-  100% {
-    transform: translateY(-30px);
-  }
-}
-
 /* Main */
 .top-section, .bottom-section {
   background: #F7F7F7;
@@ -173,7 +142,7 @@
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   margin: 0 auto 24px;
-  transition: background-color 1.5s ease-in;
+  transition: all 1s ease-in;
   cursor: pointer;
 }
 .middle-section .option .number {
@@ -186,7 +155,7 @@
   border-radius: 15px;
 }
 .middle-section .option .icon {
-  color: grey;
+  color: #7E7E7E;
   position: relative;
   top: 20px;
   left: 2px;
@@ -201,8 +170,9 @@
 .middle-section .option:hover {
   background: #F5EDFF;
 }
-.middle-section .option:hover .icon:hover {
+.middle-section .icon:hover {
   color: #9356DC;
+  fill: #9356DC;
 }
 
 /* Bottom Section */
@@ -284,6 +254,18 @@
   font-size: 24px;
 }
 
+@media (min-width: 768px) {
+  .card .badge1 {
+    position: relative;
+    bottom: 60%;
+    left: 85%;
+  }
+  .card .badge2 {
+    position: relative;
+    left: 85%;
+    bottom: 60%;
+  }
+}
 @media (min-width: 992px) {
   .form .location {
     top: 95px;
@@ -323,12 +305,12 @@
   }
   .bottom-section .badge1 {
     position: relative;
-    left: 60%;
+    left: 61%;
     bottom: 60%;
   }
   .bottom-section .badge2 {
     position: relative;
-    left: 60%;
+    left: 61%;
     bottom: 60%;
   }
   .bottom-section .content .icon1, .bottom-section .content .icon2 {
@@ -376,6 +358,7 @@
 }
 .main .background-menu .title-restaurant .icon {
   font-size: 1.5em;
+  cursor: pointer;
 }
 .main .menu-section .title {
   font-weight: 300;
@@ -396,6 +379,7 @@
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .main .menu-section .menu-description .subtitle {
   font-size: 1em;
@@ -502,7 +486,48 @@ a {
   color: #FFFFFF;
 }
 
-/**** Media Queries ****/
-/* Desktop */
+/* Animation loader */
+/*
+.loader-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0px;
+    animation: loader 5s forwards;
+}
+
+@keyframes loader {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.container {
+    width: 100%;
+    animation: main 6000ms;
+}
+    @keyframes main {
+    0% {
+        transform: translateX(-9999px);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+*/
 
 /*# sourceMappingURL=styles.css.map */

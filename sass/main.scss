@@ -11,9 +11,46 @@ a {
         text-decoration: none;
         color: $color-white;
 }
-
-/**** Media Queries ****/
-/* Desktop */
-@media (min-width: 992px) {
-        
+/* Animation loader */
+/*
+.loader-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0px;
+    animation: loader 5s forwards;
 }
+
+@keyframes loader {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.container {
+    width: 100%;
+    animation: main 6000ms;
+}
+    @keyframes main {
+    0% {
+        transform: translateX(-9999px);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+*/

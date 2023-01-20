@@ -14,36 +14,6 @@
                 transform: translate(-50%, -50%);
         }
 }
-.loader {
-        position: absolute;
-        background: $color-white;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: opacity 1s ease-in-out;
-        .dot {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                background: #000;
-                color: $color-white;
-                margin: 0 15px;
-                animation: loader infinite 0.3s alternate;
-        }
-        .d2 {
-                animation-delay: 0.05s;
-        }
-        .d3 {
-                animation-delay: 0.1s;
-        }
-        @keyframes loader {
-                100% {
-                        transform: translateY(-30px);
-                }
-        }
-}
 /* Main */
 .top-section, .bottom-section {
     background: $color-grey;
@@ -102,7 +72,7 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             border-radius: 20px;
             margin: 0 auto 24px;
-            transition: background-color 1.5s ease-in;
+            transition: all 1s ease-in;
             cursor: pointer;
             .number {
                     position: relative;
@@ -114,7 +84,7 @@
                     border-radius: 15px;
             }
             .icon {
-                    color: grey;
+                    color: #7E7E7E;
                     position: relative;
                     top: 20px;
                     left: 2px;
@@ -129,9 +99,10 @@
     }
     .option:hover {
             background: $color-grey-hover;
-            .icon:hover {
-                    color: $color-primary;
-            }
+    }
+    .icon:hover {
+        color: $color-primary;
+        fill: #9356DC;
     }
 }
 /* Bottom Section */
@@ -212,7 +183,21 @@
             }
         }        
 }   
-
+@media (min-width: 768px) {
+        .card {
+                .badge1 {
+                        position: relative;
+                        bottom: 60%;
+                        left: 85%;
+                        
+                }
+                .badge2 {
+                        position: relative;
+                        left: 85%;
+                        bottom: 60%;
+                }
+        }
+}
 @media (min-width: 992px) {
         .form {
                 .location {
@@ -255,12 +240,13 @@
                 }
                 .badge1 {
                         position: relative;
-                        left: 60%;
+                        left: 61%;
                         bottom: 60%;
+                        
                 }
                 .badge2 {
                         position: relative;
-                        left: 60%;
+                        left: 61%;
                         bottom: 60%;
                 }
                 .content {
