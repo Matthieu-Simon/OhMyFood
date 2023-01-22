@@ -35,6 +35,11 @@
   cursor: pointer;
 }
 
+.btn-menu:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transition: background-color 2s ease;
+}
+
 .btn-return {
   color: black;
   position: absolute;
@@ -157,7 +162,7 @@
 .middle-section .option .icon {
   color: #7E7E7E;
   position: relative;
-  top: 20px;
+  top: 23px;
   left: 2px;
 }
 .middle-section .option .choice {
@@ -172,12 +177,12 @@
 }
 .middle-section .icon:hover {
   color: #9356DC;
-  fill: #9356DC;
+  -webkit-fill-color: #9356DC;
 }
 
 /* Bottom Section */
 .bottom-section {
-  padding: 30px 0;
+  padding: 40px 0;
 }
 .bottom-section .title {
   margin-bottom: 0;
@@ -360,6 +365,10 @@
   font-size: 1.5em;
   cursor: pointer;
 }
+.main .background-menu .title-restaurant .icon:hover {
+  -webkit-text-fill-color: red;
+  background: red;
+}
 .main .menu-section .title {
   font-weight: 300;
   margin-left: 10px;
@@ -405,6 +414,28 @@
 }
 .main .menu-section .subtitle, .main .menu-section .content {
   margin: 0;
+}
+.main .menu-section .validate {
+  background: #FFFFFF;
+  border-radius: 0 15px 15px 0;
+  width: 0;
+  padding: 0;
+}
+.main .menu-section .validate:hover {
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  height: 50px;
+  animation: choice 1s ease;
+}
+@keyframes choice {
+  0% {
+    width: 0;
+    padding: 0;
+  }
+  100% {
+    width: 50px;
+    padding: 10px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -525,6 +556,52 @@ a {
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+*/
+/* Animation Menu */
+/*
+.menu-anim1 {
+    animation: menu 2s ease-in;
+}
+.menu-anim2 {
+    animation: menu 2.5s ease-in;
+}
+.menu-anim3 {
+    animation: menu 3s ease-in;
+}
+@keyframes menu {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    35% {
+        opacity: 0.25;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+*/
+/*
+@keyframes menu {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    35% {
+        opacity: 0.40;
+    }
+    60% {
+
+        opacity: 0.80;
+    }
+    100%{
+        transform: translateX(1);
         opacity: 1;
     }
 }

@@ -29,6 +29,10 @@
                 font-size: 1.5em;
                 cursor: pointer;
             }
+            .icon:hover {
+                -webkit-text-fill-color: red;
+                background: red;
+            }
         }
     }
     .menu-section {
@@ -78,6 +82,28 @@
         }
         .subtitle, .content {
             margin: 0;
+        }
+        .validate {
+            background: $color-white;
+            border-radius: 0 15px 15px 0;
+            width: 0;
+            padding: 0;
+        }
+        .validate:hover {
+            background: $color-tertiary;
+            border-radius: 0 15px 15px 0;
+            height: 50px;
+            animation: choice 1s ease;
+        }
+        @keyframes choice {
+            0% {
+                width: 0;
+                padding: 0;
+            }
+            100% {
+                width: 50px;
+                padding: 10px;
+            }
         }
     }
 }
