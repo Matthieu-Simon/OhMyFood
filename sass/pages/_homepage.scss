@@ -99,11 +99,11 @@
     }
     .option:hover {
             background: $color-grey-hover;
+            .icon {
+                color: $color-primary;
+            }
     }
-    .icon:hover {
-        color: $color-primary;
-        -webkit-fill-color: #9356DC;
-    }
+    
 }
 /* Bottom Section */
 .bottom-section {

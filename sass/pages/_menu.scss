@@ -63,6 +63,12 @@
                 text-overflow: ellipsis;
             }
         }
+        .menu-description:hover {
+                .validate {
+                    animation: choice 1s ease;
+                    width: 60px;
+                }
+        }
         .text-description {
             width: 75%;
             display: flex;
@@ -77,34 +83,28 @@
             }
         }
         .price-description {
-            margin: 25px 15px 0 0;
+            margin-top: 25px;
             font-weight: 700;
         }
         .subtitle, .content {
             margin: 0;
         }
         .validate {
-            background: $color-white;
-            border-radius: 0 15px 15px 0;
-            width: 0;
-            padding: 0;
-        }
-        .validate:hover {
             background: $color-tertiary;
             border-radius: 0 15px 15px 0;
-            height: 50px;
-            animation: choice 1s ease;
+            width: 0;
+            transition: width 1s;
         }
+        
+        /*
         @keyframes choice {
-            0% {
+            from {
                 width: 0;
-                padding: 0;
             }
-            100% {
+            to {
                 width: 50px;
-                padding: 10px;
             }
-        }
+        }*/
     }
 }
 @media (min-width: 992px) {
