@@ -147,7 +147,7 @@
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   margin: 0 auto 24px;
-  transition: all 1s ease-in;
+  transition: background 1s ease-out;
   cursor: pointer;
 }
 .middle-section .option .number {
@@ -193,6 +193,7 @@
 }
 
 .card {
+  position: relative;
   background: #FFFFFF;
   color: black;
   width: 85vw;
@@ -207,69 +208,37 @@
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.card .badge1, .card .badge2 {
+.card .badge {
   padding: 5px 10px;
   border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   background: #99E2D0;
   color: #008766;
   font-size: 14px;
-}
-.card .badge1 {
-  position: relative;
-  left: 65%;
-  bottom: 60%;
-}
-.card .badge2 {
-  position: relative;
-  left: 65%;
-  bottom: 60%;
+  position: absolute;
+  right: 15px;
+  top: 20px;
 }
 .card .content {
   padding-top: 5px;
-}
-.card .content .title1, .card .content .title2, .card .content .subtitle1, .card .content .subtitle2 {
-  position: relative;
-  left: 10px;
-  bottom: 20px;
-  margin: 0;
 }
 .card .content .title, .card .content .subtitle {
   position: relative;
   left: 10px;
   margin: 0;
 }
-.card .content .title1, .card .content .title2, .card .content .title {
+.card .content .title {
   font-size: 1.1em;
   padding-bottom: 5px;
 }
-.card .content .icon1, .card .content .icon2 {
-  color: rgb(144, 142, 142);
-  position: relative;
-  bottom: 60px;
-  left: 85%;
-  font-size: 24px;
-}
 .card .content .icon {
   color: rgb(144, 142, 142);
-  position: relative;
-  left: 85%;
-  bottom: 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
   font-size: 24px;
 }
 
-@media (min-width: 768px) {
-  .card .badge1 {
-    position: relative;
-    bottom: 60%;
-    left: 85%;
-  }
-  .card .badge2 {
-    position: relative;
-    left: 85%;
-    bottom: 60%;
-  }
-}
 @media (min-width: 992px) {
   .form .location {
     top: 95px;
@@ -306,30 +275,6 @@
   }
   .bottom-section .article .card {
     width: 20vw;
-  }
-  .bottom-section .badge1 {
-    position: relative;
-    left: 61%;
-    bottom: 60%;
-  }
-  .bottom-section .badge2 {
-    position: relative;
-    left: 61%;
-    bottom: 60%;
-  }
-  .bottom-section .content .icon1, .bottom-section .content .icon2 {
-    color: rgb(144, 142, 142);
-    position: relative;
-    bottom: 60px;
-    left: 85%;
-    font-size: 24px;
-  }
-  .bottom-section .content .icon {
-    color: rgb(144, 142, 142);
-    position: relative;
-    left: 85%;
-    bottom: 40px;
-    font-size: 24px;
   }
 }
 /* Head Section */
