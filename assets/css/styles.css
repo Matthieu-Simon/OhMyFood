@@ -313,17 +313,6 @@
   -webkit-text-fill-color: red;
   background: red;
 }
-.main .menu-section {
-  /*
-  @keyframes choice {
-      from {
-          width: 0;
-      }
-      to {
-          width: 50px;
-      }
-  }*/
-}
 .main .menu-section .title {
   font-weight: 300;
   margin-left: 10px;
@@ -335,52 +324,67 @@
 }
 .main .menu-section .menu-description {
   width: 95%;
+  display: flex;
   height: 70px;
   margin: auto;
   margin-bottom: 15px;
   background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
   cursor: pointer;
 }
-.main .menu-section .menu-description .subtitle {
-  font-size: 1em;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.main .menu-section .menu-description:hover .validate {
-  animation: choice 1s ease;
-  width: 60px;
-}
-.main .menu-section .text-description {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin-left: 15px;
-}
-.main .menu-section .text-description .subtitle, .main .menu-section .text-description .content {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.main .menu-section .price-description {
-  margin-top: 25px;
+.main .menu-section .menu-description .price {
+  color: rgb(78, 78, 78);
+  margin: 27px 25px 0;
   font-weight: 700;
+  position: relative;
+  top: 15px;
 }
-.main .menu-section .subtitle, .main .menu-section .content {
-  margin: 0;
-}
-.main .menu-section .validate {
+.main .menu-section .menu-description .validate {
+  position: relative;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
   width: 0;
   transition: width 1s;
 }
+.main .menu-section .menu-description .validate .check {
+  display: none;
+}
+.main .menu-section .menu-description:hover .validate {
+  width: 100px;
+  animation: choice 1s ease-out;
+}
+.main .menu-section .menu-description:hover .validate .check {
+  display: inline;
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  background-color: white;
+  color: #99E2D0;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.2em;
+}
+.main .menu-section .text-description {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main .menu-section .text-description .subtitle, .main .menu-section .text-description .content {
+  margin: 0;
+  position: relative;
+  top: 10px;
+  left: 15px;
+  padding-bottom: 10px;
+}
 
+@media (min-width: 768px) {
+  .main .menu-section .menu-description:hover .validate .check {
+    top: 26px;
+    left: 30px;
+  }
+}
 @media (min-width: 992px) {
   .main {
     background: #FFFFFF;
