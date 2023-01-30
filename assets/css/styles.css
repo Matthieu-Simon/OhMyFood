@@ -162,13 +162,13 @@
 .middle-section .option .icon {
   color: #7E7E7E;
   position: relative;
-  top: 23px;
+  top: 20px;
   left: 2px;
 }
 .middle-section .option .choice {
   position: relative;
   left: 70px;
-  bottom: 12px;
+  bottom: 10px;
   font-size: 0.9em;
   font-weight: 500;
 }
