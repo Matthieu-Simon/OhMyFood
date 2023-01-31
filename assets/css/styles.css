@@ -49,7 +49,7 @@
 
 .btn-return:hover {
   color: #9356DC;
-  background: #FFF;
+  background: #FFFFFF;
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   padding: 7px;
@@ -311,22 +311,35 @@
 }
 .main .background-menu .title-restaurant {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   padding-top: 30px;
 }
 .main .background-menu .title-restaurant .title {
   font-family: "Shrikhand", cursive;
   font-size: 1.5em;
+  margin-right: 35px;
 }
-.main .background-menu .title-restaurant .icon {
+.main .background-menu .title-restaurant .fa-heart {
   font-size: 1.5em;
   cursor: pointer;
 }
-.main .background-menu .title-restaurant .icon:hover {
+.main .background-menu .title-restaurant .icon-empty {
+  color: rgb(144, 142, 142);
+}
+.main .background-menu .title-restaurant .icon-empty:hover {
+  display: none;
+}
+.main .background-menu .title-restaurant .icon-full {
+  color: transparent;
+  position: relative;
+  right: 25px;
+  font-size: 1.6em;
+  transition: color 1s ease-out;
+}
+.main .background-menu .title-restaurant .icon-full:hover {
   color: #FF79DA;
-  background: red;
-  border: none;
+  transition: color 1s ease-out;
 }
 .main .menu-section .title {
   font-weight: 300;
@@ -405,6 +418,9 @@
   .main {
     background: #FFFFFF;
   }
+  .main .background-menu .title-restaurant {
+    justify-content: center;
+  }
   .main .banner-section .img {
     height: 350px;
   }
@@ -423,8 +439,8 @@
     display: flex;
     justify-content: center;
   }
-  .main .background-menu .title-restaurant .icon {
-    margin-left: 40px;
+  .main .background-menu .title-restaurant .icon-empty:hover {
+    display: none;
   }
 }
 .footer {
