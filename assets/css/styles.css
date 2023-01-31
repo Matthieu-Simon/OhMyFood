@@ -568,5 +568,17 @@ a {
     }
 }
 */
+.check {
+  animation: check 1s ease-out;
+}
+
+@keyframes check {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
