@@ -38,10 +38,23 @@
     top: 20px;
     left: 20px;
 }
+.btn-return:hover {
+    color: #9356DC;
+    background: #FFF;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 7px;
+    top: 12px;
+    left: 10px;
+}
 @media (min-width: 992px) {
     .btn-return {
         top: 35px;
-        left: 5%;
+        left: 60px;
+    }
+    .btn-return:hover {
+        top: 27px;
+        left: 52px;
     }
     .btn-menu {
         margin: 10px auto;

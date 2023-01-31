@@ -47,10 +47,24 @@
   left: 20px;
 }
 
+.btn-return:hover {
+  color: #9356DC;
+  background: #FFF;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 7px;
+  top: 12px;
+  left: 10px;
+}
+
 @media (min-width: 992px) {
   .btn-return {
     top: 35px;
-    left: 5%;
+    left: 60px;
+  }
+  .btn-return:hover {
+    top: 27px;
+    left: 52px;
   }
   .btn-menu {
     margin: 10px auto;
@@ -310,8 +324,9 @@
   cursor: pointer;
 }
 .main .background-menu .title-restaurant .icon:hover {
-  -webkit-text-fill-color: red;
+  color: #FF79DA;
   background: red;
+  border: none;
 }
 .main .menu-section .title {
   font-weight: 300;
@@ -368,8 +383,6 @@
 .main .menu-section .text-description {
   width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .main .menu-section .text-description .subtitle, .main .menu-section .text-description .content {
   margin: 0;
@@ -377,6 +390,9 @@
   top: 10px;
   left: 15px;
   padding-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -533,8 +549,7 @@ a {
         opacity: 1;
     }
 }
-*/
-/*
+
 @keyframes menu {
     0% {
         transform: translateX(-1000px);

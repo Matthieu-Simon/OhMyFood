@@ -30,8 +30,9 @@
                 cursor: pointer;
             }
             .icon:hover {
-                -webkit-text-fill-color: red;
+                color: $color-secondary;
                 background: red;
+                border: none;
             }
         }
     }
@@ -93,14 +94,15 @@
         .text-description {
             width: 100%;
             overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
             .subtitle, .content {
                 margin: 0;
                 position: relative;
                 top: 10px;
                 left: 15px;
                 padding-bottom: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             
         }
