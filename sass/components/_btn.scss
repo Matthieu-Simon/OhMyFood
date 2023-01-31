@@ -1,8 +1,24 @@
-.description {
-    &__btn {
+.btn {
         display: block;
         margin: 15px auto 0;
-        background: linear-gradient(162deg, #FF79DA 0%, #9356DC 100%);
+        background: $color-btn;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+        border-radius: 25px;
+        color: $color-white;
+        border: none;
+        padding: 17px 22px;
+        transition: background-color 2s ease;
+        cursor: pointer;
+}
+    .btn:hover {
+        background: $color-btn-hover;
+    
+    }
+.btn-menu {
+        width: 186px;
+        display: block;
+        margin: 15px auto 40px;
+        background: $color-btn;        
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
         border-radius: 25px;
         color: $color-white;
@@ -11,8 +27,36 @@
         transition: background-color 2s ease;
         cursor: pointer;
     }
-    &__btn:hover {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    .btn-menu:hover {
+        background: $color-btn-hover;
+        transition: background-color 2s ease;
     
+    }
+.btn-return {
+    color: black;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.btn-return:hover {
+    color: $color-primary;
+    background: $color-white;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 7px;
+    top: 12px;
+    left: 10px;
+}
+@media (min-width: 992px) {
+    .btn-return {
+        top: 35px;
+        left: 60px;
+    }
+    .btn-return:hover {
+        top: 27px;
+        left: 52px;
+    }
+    .btn-menu {
+        margin: 10px auto;
     }
 }

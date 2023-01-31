@@ -1,0 +1,171 @@
+/* Head Section */
+.main {
+    background: $color-grey;
+    font-family: "Roboto", sans-serif;
+    .banner-section {
+        .img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: 25px;
+        }
+    }
+    .background-menu {
+        background: $color-grey;
+        position: relative;
+        top: -50px;
+        margin: 0 0 -50px 0;
+        border-radius: 30px 30px 0 0;
+        .title-restaurant {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            .title {
+                font-family: 'Shrikhand', cursive;
+                font-size: 1.5em;
+                margin-right: 35px
+            }
+            .fa-heart {
+                font-size: 1.5em;
+                cursor: pointer;
+            }
+            .icon-empty {
+                color: rgb(144, 142, 142);
+            }
+            .icon-empty:hover {
+                display: none;
+            }
+            .icon-full {
+                color: transparent;
+                position: relative;
+                right: 25px;
+                font-size: 1.6em;
+                transition: color 1s ease-out;
+            }
+            .icon-full:hover {
+                color: #FF79DA;
+                transition: color 1s ease-out;
+            }
+            
+        }
+    }
+    .menu-section {
+        .title {
+            font-weight: 300;
+            margin-left: 10px;
+            border-bottom: 3px solid $color-tertiary;
+            width: 40px;
+        }
+        .category {
+            padding-bottom: 15px;
+        }
+        .menu-description {
+            width: 95%;
+            display: flex;
+            height: 70px;
+            margin: auto;
+            margin-bottom: 15px;
+            background: $color-grey;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            cursor: pointer;
+            .price {
+                color: rgb(78, 78, 78);
+                margin: 27px 25px 0;
+                font-weight: 700;
+                position: relative;
+                top: 15px;
+            }
+            .validate {
+                position: relative;
+                background: $color-tertiary;
+                border-radius: 0 15px 15px 0;
+                width: 0;
+                transition: width 1s;
+                .check {
+                    display: none;
+                }
+            }
+        }
+        .menu-description:hover {
+            .validate {
+                width: 100px;
+                animation: choice 1s ease-out;
+                .check {
+                    display: inline;
+                    position: absolute;
+                    top: 26px;
+                    left: 20px;
+                    background-color: white;
+                    color: $color-tertiary;
+                    border-radius: 15px;
+                    border: none;
+                    font-size: 1.2em;
+                }
+            }
+        }
+        .text-description {
+            width: 100%;
+            overflow: hidden;
+            .subtitle, .content {
+                margin: 0;
+                position: relative;
+                top: 10px;
+                left: 15px;
+                padding-bottom: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            
+        }
+    }
+}
+@media (min-width: 768px) {
+    .main {
+        .menu-section {
+            .menu-description:hover {
+                .validate {
+                    .check {
+                        top: 26px;
+                        left: 30px;
+                    }
+                } 
+            } 
+        } 
+    } 
+}
+@media (min-width: 992px) {
+    .main {
+        .background-menu {
+            .title-restaurant {
+                justify-content: center;
+            }
+        }
+        background: $color-white;
+        .banner-section {
+            .img {
+                height: 350px;
+            }
+        }
+        .background-menu {
+            width: 70%;
+            margin: auto;
+            margin-bottom: -50px;
+            padding-bottom: 30px;
+            .card-section {
+                width: 70%;
+                margin: auto;
+                background: $color-grey;
+            }
+            .title-restaurant {
+                display: flex;
+                justify-content: center;
+                .icon-empty:hover {
+                    display: none;
+                }
+            }
+        }
+    }
+}
