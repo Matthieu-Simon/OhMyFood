@@ -2,16 +2,16 @@
 .loader-container {
         display: flex;
         flex-direction: column;
-        animation: increase 3s forwards;
         .loader-title {
                 z-index: 1;
                 font-family: "Shrikhand", cursive;
-                font-size: 5em;
+                font-size: 2em;
                 margin: auto;
                 position: absolute;
-                top: 30%;
-                left: 50%;
+                top: 50%;
+                left: 20%;
                 transform: translate(-50%, -50%);
+                animation: loader 4s forwards;
         }
 }
 /* Main */
@@ -170,9 +170,30 @@
                 transition: color 1s ease-out;
             }
         }        
-}   
-
+} 
+/* Responsive */  
+@media (min-width: 768px) {
+        .loader-container {
+                .loader-title {
+                        font-size: 3em;
+                        left: 35%;
+                        top: 45%;
+                        transform: translate(-50%, -50%);
+                }
+            
+        }
+        
+}
 @media (min-width: 992px) {
+        .loader-container {
+            font-size: 4em;
+            .loader-title {
+                font-size: 1.5em;
+                left: 25%;
+                top: 45%;
+                transform: translate(-50%, -50%);
+        }
+        }
         .form {
                 .location {
                         top: 95px;
