@@ -531,6 +531,7 @@ a {
   100% {
     transform: scale(1.5);
     opacity: 0;
+    z-index: -1;
   }
 }
 /* Animation Main */
