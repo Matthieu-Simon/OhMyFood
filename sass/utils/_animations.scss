@@ -1,0 +1,73 @@
+/* Animation loader */
+@keyframes loader {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+        z-index: -1;
+        display: none;
+    }
+}
+/* Animation Main */
+@keyframes content-appear {
+    0% {
+        transform: translateX(-9999px);
+        opacity: 0;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* Animation Menu */
+@keyframes menu-appear {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    35% {
+        opacity: 0.25;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* Animation de l'onglet validation */
+@keyframes tab {
+   100% {
+        opacity: 1
+    }
+   80% {
+        opacity: 0.8
+    }
+   40% {
+        opacity: 0.4
+    }
+   0% {
+        opacity: 0
+    }
+}
+/* Animation Check */
+@keyframes check-appear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

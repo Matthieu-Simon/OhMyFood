@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./base/fonts";
+@import "./utils/animations";
 @import "./components/btn";
 @import "./layout/header";
 @import "./pages/homepage";
@@ -10,93 +11,4 @@
 a {
         text-decoration: none;
         color: $color-white;
-}
-/* Animation loader */
-@keyframes loader {
-    0%{
-        transform: scale(1);
-        opacity: 1;
-    }
-    100%{
-        transform: scale(1.5);
-        opacity: 0;
-        z-index: -1;
-    }
-}
-/* Animation Main */
-.container {
-    width: 100%;
-    animation: main 4500ms;
-}
-@keyframes main {
-    0% {
-        transform: translateX(-9999px);
-        opacity: 0;
-    }
-    30% {
-        opacity: 0.3;
-    }
-    70% {
-        opacity: 0.6;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-/* Animation Menu */
-.menu-anim1 {
-    animation: menu 2s ease-in;
-}
-.menu-anim2 {
-    animation: menu 2.5s ease-in;
-}
-.menu-anim3 {
-    animation: menu 3s ease-in;
-}
-@keyframes menu {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-    35% {
-        opacity: 0.25;
-    }
-    70% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-/*
-@keyframes menu {
-    0% {
-        transform: translateX(-1000px);
-        opacity: 0;
-    }
-    35% {
-        opacity: 0.40;
-    }
-    60% {
-        
-        opacity: 0.80;
-    }
-    100%{
-        transform: translateX(1);
-        opacity: 1;
-    }
-}
-*/
-/* Animation Check */
-.check {
-    animation: check 1s ease-out;
-}
-@keyframes check {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }

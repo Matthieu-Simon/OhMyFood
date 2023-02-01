@@ -4,7 +4,7 @@
         flex-direction: column;
         .loader-title {
                 z-index: 1;
-                font-family: "Shrikhand", cursive;
+                font-family: $font-title;
                 font-size: 2em;
                 margin: auto;
                 position: absolute;
@@ -15,11 +15,15 @@
         }
 }
 /* Main */
+.container {
+    width: 100%;
+    animation: content-appear 4500ms forwards;
+}
 .top-section, .bottom-section {
     background: $color-grey;
 }
 .middle-section, .bottom-section {
-    font-family: "Roboto", sans-serif;
+    font-family: $font-text;
     .title {
             position: relative;
             left: 20px;
@@ -28,7 +32,7 @@
 /* Top Section */
 /* Form */
 .form {
-    font-family: "Roboto", sans-serif;
+    font-family: $font-text;
     width: 100%;
     padding: 12px 0;
     background: $color-location;
@@ -42,7 +46,7 @@
             margin-left: 10px;
     }
     .input::placeholder {
-            color: black;
+            color: $color-black;
     }
     .input:focus {
             outline: none;
@@ -53,7 +57,7 @@
 }
 /* Title & Content */
 .description {
-    font-family: "Roboto", sans-serif;
+    font-family: $font-text;
     padding: 20px 0 45px;
     text-align: center;
     .title {
@@ -84,7 +88,7 @@
                     border-radius: 15px;
             }
             .icon {
-                    color: #7E7E7E;
+                    color: $color-icon;
                     position: relative;
                     top: 20px;
                     left: 2px;
@@ -120,7 +124,7 @@
 .card {
     position: relative;
     background: $color-white;
-    color: black;
+    color: $color-black;
     width: 85vw;
     height: 210px;
     margin: 10px 0;
@@ -155,7 +159,7 @@
                     padding-bottom: 5px;
             }
             .icon {
-                    color: rgb(144, 142, 142);
+                    color: $color-icon;
                     position: absolute;
                     bottom: 20px;
                     right: 15px;
@@ -166,7 +170,7 @@
                 color: transparent;
             }
             .effect:hover {
-                color: #FF79DA;
+                color: $color-tertiary;
                 transition: color 1s ease-out;
             }
         }        

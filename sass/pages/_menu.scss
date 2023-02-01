@@ -1,7 +1,7 @@
 /* Head Section */
 .main {
     background: $color-grey;
-    font-family: "Roboto", sans-serif;
+    font-family: $font-text;
     .banner-section {
         .img {
             width: 100%;
@@ -22,7 +22,7 @@
             align-items: center;
             padding-top: 30px;
             .title {
-                font-family: 'Shrikhand', cursive;
+                font-family: $font-title;
                 font-size: 1.5em;
                 margin-right: 35px
             }
@@ -31,7 +31,7 @@
                 cursor: pointer;
             }
             .icon-empty {
-                color: rgb(144, 142, 142);
+                color: $color-icon;
             }
             .icon-empty:hover {
                 display: none;
@@ -40,17 +40,25 @@
                 color: transparent;
                 position: relative;
                 right: 25px;
-                font-size: 1.6em;
-                transition: color 1s ease-out;
+                font-size: 1.7em;
+                transition: color 1.2s ease-out;
             }
             .icon-full:hover {
-                color: #FF79DA;
+                color: $color-secondary;
                 transition: color 1s ease-out;
             }
-            
         }
     }
     .menu-section {
+        .menu-anim1 {
+            animation: menu-appear 2s ease-in;
+        }
+        .menu-anim2 {
+            animation: menu-appear 2.5s ease-in;
+        }
+        .menu-anim3 {
+            animation: menu-appear 3s ease-in;
+        }
         .title {
             font-weight: 300;
             margin-left: 10px;
@@ -83,6 +91,7 @@
                 border-radius: 0 15px 15px 0;
                 width: 0;
                 transition: width 1s;
+                
                 .check {
                     display: none;
                 }
@@ -91,16 +100,15 @@
         .menu-description:hover {
             .validate {
                 width: 100px;
-                animation: choice 1s ease-out;
+                animation: check-appear 0.8s ease-in;
                 .check {
                     display: inline;
                     position: absolute;
                     top: 26px;
                     left: 20px;
-                    background-color: white;
+                    background: $color-white;
                     color: $color-tertiary;
                     border-radius: 15px;
-                    border: none;
                     font-size: 1.2em;
                 }
             }
@@ -109,6 +117,7 @@
             width: 100%;
             overflow: hidden;
             .subtitle, .content {
+                max-width: 85%;
                 margin: 0;
                 position: relative;
                 top: 10px;
@@ -127,9 +136,10 @@
         .menu-section {
             .menu-description:hover {
                 .validate {
+                    width: 70px;
                     .check {
                         top: 26px;
-                        left: 30px;
+                        left: 20px;
                     }
                 } 
             } 

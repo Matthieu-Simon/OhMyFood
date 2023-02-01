@@ -8,12 +8,12 @@
             cursor: pointer;
     }
     .title {
-            font-family: "Shrikhand", cursive;
+            font-family: $font-title;
             width: 50%;
             font-size: 18px;
     }
     .list {
-            font-family: "Roboto", sans-serif;
+            font-family: $font-text;
             list-style: none;
             line-height: 24px;
             padding: 0;
