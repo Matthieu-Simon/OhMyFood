@@ -326,7 +326,7 @@
   color: transparent;
 }
 .card .content .effect:hover {
-  color: #99E2D0;
+  color: #FF79DA;
   transition: color 1s ease-out;
 }
 
