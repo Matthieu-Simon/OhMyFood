@@ -28,7 +28,7 @@ a {
     width: 100%;
     animation: main 4500ms;
 }
-    @keyframes main {
+@keyframes main {
     0% {
         transform: translateX(-9999px);
         opacity: 0;

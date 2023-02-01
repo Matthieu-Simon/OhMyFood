@@ -1,36 +1,25 @@
+/* Bouton Homepage */
 .btn {
-        display: block;
-        margin: 15px auto 0;
-        background: $color-btn;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-        border-radius: 25px;
-        color: $color-white;
-        border: none;
-        padding: 17px 22px;
-        transition: background-color 2s ease;
-        cursor: pointer;
+    display: block;
+    margin: 15px auto 0;
+    background: $color-btn;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 25px;
+    color: $color-white;
+    border: none;
+    padding: 17px 22px;
+    transition: background-color 2s ease;
+    cursor: pointer;
 }
-    .btn:hover {
-        background: $color-btn-hover;
-    }
+.btn:hover {
+    background: $color-btn-hover;
+}
+/* Bouton Commander (Menu) */
 .btn-menu {
-        width: 186px;
-        display: block;
-        margin: 15px auto 40px;
-        background: $color-btn;        
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-        border-radius: 25px;
-        color: $color-white;
-        border: none;
-        padding: 17px 22px;
-        transition: background-color 2s ease;
-        cursor: pointer;
-    }
-    .btn-menu:hover {
-        background: $color-btn-hover;
-        transition: background-color 2s ease;
-    
-    }
+    width: 186px;
+    margin: 15px auto 40px;
+}
+/* Bouton Retour */
 .btn-return {
     color: black;
     position: absolute;
