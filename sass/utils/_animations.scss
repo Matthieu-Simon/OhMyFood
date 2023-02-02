@@ -71,3 +71,18 @@
         opacity: 1;
     }
 }
+
+@keyframes check-disappear {
+    100% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    0% {
+        opacity: 1;
+    }
+}

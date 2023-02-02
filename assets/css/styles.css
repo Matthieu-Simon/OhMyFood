@@ -79,6 +79,20 @@
     opacity: 1;
   }
 }
+@keyframes check-disappear {
+  100% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
 /* Bouton Homepage */
 .btn {
   display: block;
@@ -89,7 +103,7 @@
   color: #FFFFFF;
   border: none;
   padding: 17px 22px;
-  transition: background-color 2s ease;
+  transition: background 2s ease-in;
   cursor: pointer;
 }
 
@@ -166,7 +180,7 @@
 /* Main */
 .container {
   width: 100%;
-  animation: content-appear 4500ms forwards;
+  animation: content-appear 4500ms;
 }
 
 .top-section, .bottom-section {
@@ -478,13 +492,14 @@
   border-radius: 0 15px 15px 0;
   width: 0;
   transition: width 1s;
+  animation: check-disappear 1s ease-out;
 }
 .main .menu-section .menu-description .validate .check {
   display: none;
 }
 .main .menu-section .menu-description:hover .validate {
   width: 100px;
-  animation: check-appear 0.8s ease-in;
+  animation: check-appear 1s ease-in;
 }
 .main .menu-section .menu-description:hover .validate .check {
   display: inline;
